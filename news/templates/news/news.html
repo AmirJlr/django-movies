@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+  {% for news in newss %}
+
+    <div class="card">
+      <div class="card-header">
+                {{ news.headline }}
+      </div>
+
+      <div class="card-body">
+          <h6 class="card-title">{{ news.date }}</h6>
+          <p class="card-text">{{ news.body }}.</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>
+    
+    <br>
+  {% endfor %}
+{% endblock content %}
+
+
